@@ -9,6 +9,8 @@
     colorscheme gruvbox
     let g:gruvbox_contrast_dark = 'hard'
     set background=dark    " Setting dark mode
+    let g:airline_theme = 'gruvbox'
+    set termguicolors
 
 if &compatible
   set nocompatible
