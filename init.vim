@@ -3,6 +3,7 @@
 "--------------------------------------------------------
     set mouse=a             " Enable mouse
     let mapleader=","
+    syntax on "语法开启
 
 "--------------------------------------------------------
 "GUI settings
@@ -19,7 +20,12 @@
 nnoremap <F2> :e ~/AppData/Local/nvim/init.vim<cr>
 nnoremap <M-m> :MarkdownPreview<CR>
 nmap <silent> <Leader>e :Defx <cr>
-   
+inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    
+\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
+nnoremap <C-o><C-u> :OmniSharpFindUsages<CR>
+nnoremap <C-o><C-d> :OmniSharpGotoDefinition<CR>
+nnoremap <C-o><C-d><C-p> :OmniSharpPreviewDefinition<CR>
+nnoremap <C-o><C-r> :!dotnet run  
 "--------------------------------------------------------
 "path settings
 "--------------------------------------------------------    
@@ -55,6 +61,8 @@ if dein#load_state('~/.cache/dein')
 					\ 'build': 'sh -c "cd app & yarn install"' })
 
     call dein#add('Shougo/defx.nvim')
+    call dein#add('OmniSharp/omnisharp-vim')
+    call dein#add('tpope/vim-dispatch')
 
 
   call dein#end()
@@ -87,6 +95,7 @@ syntax enable
   let g:vim_markdown_frontmatter = 1  " for YAML format
   let g:vim_markdown_toml_frontmatter = 1  " for TOML format
   let g:vim_markdown_json_frontmatter = 1  " for JSON format
+  let g:deoplete#enable_at_startup = 1
 
   	"iamcco/markdown-preview.nvim
   let g:mkdp_auto_close = 0
@@ -100,3 +109,30 @@ call defx#custom#option('_', {
       \ 'toggle': 1,
       \ 'resume': 1
       \ })
+
+let g:OmniSharp_popup_options = {
+\ 'winblend': 30,
+\ 'winhl': 'Normal:Normal'
+\}
+
+"Input setting
+let g:input_toggle = 1
+function! Fcitx2en()
+   let s:input_status = system("fcitx-remote")
+   if s:input_status == 2
+      let g:input_toggle = 1
+      let l:a = system("fcitx-remote -c")
+   endif
+endfunction
+
+function! Fcitx2zh()
+   let s:input_status = system("fcitx-remote")
+   if s:input_status != 2 && g:input_toggle == 1
+      let l:a = system("fcitx-remote -o")
+      let g:input_toggle = 0
+   endif
+endfunction
+
+set timeoutlen=150
+autocmd InsertLeave * call Fcitx2en()
+"autocmd InsertEnter * call Fcitx2zh()
