@@ -158,6 +158,9 @@ if dein#load_state('~/.cache/dein')
   " indent Plugins 
    call dein#add('Yggdroot/indentLine')
 
+  " complete Plugins
+   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+
   call dein#end()
   call dein#save_state()
 endif
