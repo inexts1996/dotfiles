@@ -161,6 +161,12 @@ if dein#load_state('~/.cache/dein')
   " complete Plugins
    call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 
+  " Recent files
+   call dein#add('Shougo/neomru.vim')
+
+  " Start Screen
+   call dein#add('mhinz/vim-startify')
+
   call dein#end()
   call dein#save_state()
 endif
