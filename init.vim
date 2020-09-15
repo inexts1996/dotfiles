@@ -117,6 +117,8 @@
    vnoremap <leader>y "+y
   " fileTree 切换
    nnoremap <silent> <F3> :Defx<Cr>
+  " Goyo
+	nnoremap <silent> <leader>z :Goyo<cr>
   
 "========================================================
 "Other Settings 
@@ -167,6 +169,15 @@ if dein#load_state('~/.cache/dein')
   " Start Screen
    call dein#add('mhinz/vim-startify')
 
+  " markdown
+   call dein#add('plasticboy/vim-markdown', {'on_ft':['markdown', 'pandoc.markdown', 'rmd', 'md']})
+   call dein#add('iamcco/markdown-preview.nvim', 
+			   \ {'on_ft' : ['markdown', 'pandoc.markdown', 'rmd','md'],
+			    \ 'build' : 'sh -c "cd app && yarn install" ' })
+   call dein#add('junegunn/goyo.vim')
+   call dein#add('junegunn/limelight.vim')
+   call dein#add('amix/vim-zenroom2')
+
   call dein#end()
   call dein#save_state()
 endif
@@ -215,3 +226,7 @@ syntax enable
   " indentLine
    let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
    let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+
+  " limelight
+   autocmd! User GoyoEnter Limelight
+   autocmd! User GoyoLeave Limelight!
