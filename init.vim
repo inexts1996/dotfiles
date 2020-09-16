@@ -121,12 +121,16 @@
   " fileTree 切换
    nnoremap <silent> <F3> :Defx<Cr>
 
-"markdown map
+" markdown map
   " Goyo
 	nnoremap <silent> <leader> <m-z> :Goyo<cr>
   " markdown preview
     nnoremap <silent> <leader> <m-p> :MarkdownPreview<cr>
   
+" buffer
+  " buffer change
+    nnoremap <silent> <leader>bn :bn<cr>
+    nnoremap <silent> <leader><b-p> :bp<cr>
   
 "========================================================
 "Other Settings 
@@ -181,6 +185,7 @@ if dein#load_state('~/.cache/dein')
 
   " complete Plugins
    call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+   call dein#add('jiangmiao/auto-pairs', {'merged':0, 'rev': 'release'})
 
   " Recent files
    call dein#add('Shougo/neomru.vim')
@@ -196,6 +201,7 @@ if dein#load_state('~/.cache/dein')
    call dein#add('junegunn/goyo.vim')
    call dein#add('junegunn/limelight.vim')
    call dein#add('amix/vim-zenroom2')
+  
 
   call dein#end()
   call dein#save_state()
@@ -214,6 +220,8 @@ syntax enable
    let g:airline_theme = 'gruvbox'
    set termguicolors
    let g:gruvbox_termcolors = 256
+  " peaksea
+  " colorscheme peaksea
 
   " defx
    call defx#custom#option('_', {
