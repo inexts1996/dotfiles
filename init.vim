@@ -93,8 +93,8 @@
 
  " Status line
   " format the status line
-  set statusline=%<%f\%h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\%-14.(%l,%c%V%)\ %P
-  " set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+   set statusline=%<%f\%h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\%-14.(%l,%c%V%)\ %P
+  "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
   " Always show the status line
    set laststatus=2
 
@@ -103,22 +103,30 @@
 "Environment Settings
 "========================================================
   "Python
-   let g:python2_host_prog  = "D:/Programs/Python27/python.exe"
+   let g:python_host_prog  = "D:/Programs/Python27/python.exe"
    let g:python3_host_prog = "D:/Programs/Python38/python.exe"
 
 "========================================================
 "key mappings
 "========================================================
   " 打开init.vim
-   nnoremap <F2> :e ~/AppData/Local/nvim/init.vim<cr>
+   map <leader>e :e! ~/AppData/Local/nvim/init.vim<cr>
+   autocmd! bufwritepost $MYVIMRC source $MYVIMRC
+   " 打开自己收集的vim一些知识
+   nnoremap <leader>h :e ~/AppData/Local/nvim/help.md<cr>
   " 修复Shift + insert的错误
    inoremap <silent>  <S-Insert>  <C-R>+
   " 复制选中区到系统剪切板中
    vnoremap <leader>y "+y
   " fileTree 切换
    nnoremap <silent> <F3> :Defx<Cr>
+
+"markdown map
   " Goyo
-	nnoremap <silent> <leader>z :Goyo<cr>
+	nnoremap <silent> <leader> <m-z> :Goyo<cr>
+  " markdown preview
+    nnoremap <silent> <leader> <m-p> :MarkdownPreview<cr>
+  
   
 "========================================================
 "Other Settings 
@@ -127,6 +135,17 @@
    autocmd! bufwritepost _vimrc source %
   " " vimrc文件修改之后自动加载, linux
    autocmd! bufwritepost .vimrc source %
+
+"========================================================
+"Helper Functions
+"========================================================
+  " Returns true if paste mode is enabled
+   function! HasPaste()
+      if &paste
+         return 'PASTE MODE  '
+      endif
+      return ''
+   endfunction
 
 "========================================================
 "Pluggins Install
