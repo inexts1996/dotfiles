@@ -19,7 +19,11 @@
   "set backupdir=/tmp/vimbk/
   " 取消备份
    set nobackup
-
+  " netrw settings
+   set nocp
+   filetype plugin on
+  " grep settings
+   set grepprg=rg\ --vimgrep\ --smart-case\ --follow 
 "========================================================
 "Diplay settings
 "========================================================
@@ -104,10 +108,11 @@
 "========================================================
 "Environment Settings
 "========================================================
-  "Python
+  " Python
    let g:python_host_prog  = "D:/Programs/Python27/python.exe"
    let g:python3_host_prog = "D:/Programs/Python38/python.exe"
 
+  " paths
 "========================================================
 "key mappings
 "========================================================
@@ -203,7 +208,11 @@ if dein#load_state('~/.cache/dein')
    call dein#add('junegunn/goyo.vim')
    call dein#add('junegunn/limelight.vim')
    call dein#add('amix/vim-zenroom2')
-  
+
+  " search
+   call dein#add('junegunn/fzf') 
+   call dein#add('junegunn/fzf.vim') 
+   call dein#add('BurntSushi/ripgrep')
 
   call dein#end()
   call dein#save_state()

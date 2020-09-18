@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Bloom/test'
+let g:netrw_dirhist_3='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Bloom'
+let g:netrw_dirhist_2='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Bloom/test'
+let g:netrw_dirhist_1='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Bloom'
+let g:netrw_dirhist_0='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Bloom/test'
+let g:netrw_dirhist_9='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Bloom'
+let g:netrw_dirhist_8='H:\projects\Works\SlgClient\Assets\Scripts\HotfixPro\Services\UI\Module\Bloom'
+let g:netrw_dirhist_7='D:/'
+let g:netrw_dirhist_6='D:/Program Files'
+let g:netrw_dirhist_5='D:/Program Files/Neovim'
