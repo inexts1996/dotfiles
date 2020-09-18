@@ -44,8 +44,10 @@
    set ignorecase
   " 有一个或一个以上大写字母时仍然区分大小写搜索
    set smartcase
+  " 编辑时隐藏鼠标
+   set mousehide
 
-   if has('gui_running')
+  if has('gui_running')
 	 set guioptions-=m " Hide menu bar.
      set guioptions-=T " Hide toolbar
 	 set guioptions-=l " Hide left-hand scrollbar
@@ -219,6 +221,7 @@ syntax enable
    set background=dark    " Setting dark mode
    let g:airline_theme = 'gruvbox'
    set termguicolors
+
    let g:gruvbox_termcolors = 256
   " peaksea
   " colorscheme peaksea
