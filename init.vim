@@ -23,7 +23,7 @@
    set nocp
    filetype plugin on
   " grep settings
-   set grepprg=rg\ --vimgrep\ --smart-case\ --follow 
+   set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 "========================================================
 "Diplay settings
 "========================================================
@@ -113,6 +113,7 @@
    let g:python3_host_prog = "D:/Programs/Python38/python.exe"
 
   " paths
+   set path+=$PWD/**
 "========================================================
 "key mappings
 "========================================================
@@ -210,8 +211,8 @@ if dein#load_state('~/.cache/dein')
    call dein#add('amix/vim-zenroom2')
 
   " search
-   call dein#add('junegunn/fzf') 
-   call dein#add('junegunn/fzf.vim') 
+   call dein#add('junegunn/fzf', { 'build': './install' }) 
+   call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' }) 
    call dein#add('BurntSushi/ripgrep')
 
   call dein#end()
