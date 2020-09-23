@@ -133,13 +133,15 @@
   " Goyo
 	nnoremap <silent> <leader> <m-z> :Goyo<cr>
   " markdown preview
-    nnoremap <silent> <leader> <m-p> :MarkdownPreview<cr>
+    "nnoremap <silent> <leader> <m-p> :MarkdownPreview<cr>
   
 " buffer
   " buffer change
     nnoremap <silent> <leader>bn :bn<cr>
     nnoremap <silent> <leader><b-p> :bp<cr>
   
+" highlight
+ nnoremap <silent> <esc><esc> :noh<return><esc>
 "========================================================
 "Other Settings 
 "========================================================
@@ -180,7 +182,10 @@ if dein#load_state('~/.cache/dein')
 
   "Display Plugins
    call dein#add('morhetz/gruvbox')
+   call dein#add('itchyny/landscape.vim')
    call dein#add('wsdjeg/dein-ui.vim')
+   "call dein#add('powerline/powerline')
+   call dein#add('itchyny/lightline.vim')
 
   "CSharp Plugins
    call dein#add('OmniSharp/omnisharp-vim', {'on_ft': ['cs']})
@@ -214,7 +219,9 @@ if dein#load_state('~/.cache/dein')
    call dein#add('junegunn/fzf', { 'build': './install' }) 
    call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' }) 
    call dein#add('BurntSushi/ripgrep')
-
+  
+  " others
+   call dein#add('takac/vim-hardtime')
   call dein#end()
   call dein#save_state()
 endif
@@ -231,10 +238,7 @@ syntax enable
    set background=dark    " Setting dark mode
    let g:airline_theme = 'gruvbox'
    set termguicolors
-
    let g:gruvbox_termcolors = 256
-  " peaksea
-  " colorscheme peaksea
 
   " defx
    call defx#custom#option('_', {
@@ -270,3 +274,22 @@ syntax enable
   " limelight
    autocmd! User GoyoEnter Limelight
    autocmd! User GoyoLeave Limelight!
+  
+  " vim_hardtime
+   let g:hardtime_default_on = 1
+
+  " powerline
+
+  set laststatus=2  
+  set showtabline=2
+  set noshowmode  
+  set t_Co=256
+   " python from powerline.vim import setup as powerline_setup
+   "python powerline_setup()
+   "python del powerline_setup
+  "set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/ 'powerline的安装路径，可能需要自行调整'
+  
+  " lightline
+   let g:lightline = {
+         \ 'colorscheme': 'wombat',
+         \ }
