@@ -24,6 +24,9 @@
    filetype plugin on
   " grep settings
    set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
+  " clipboard settings
+   set clipboard=unnamed 
 "========================================================
 "Diplay settings
 "========================================================
