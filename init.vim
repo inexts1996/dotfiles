@@ -296,3 +296,6 @@ syntax enable
    let g:lightline = {
          \ 'colorscheme': 'wombat',
          \ }
+
+  " vim-markdown
+  set nofoldenable
