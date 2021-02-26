@@ -117,6 +117,7 @@
 
   " paths
    set path+=$PWD/**
+   "set path+= F:/inexts/**
 "========================================================
 "key mappings
 "========================================================
@@ -208,6 +209,7 @@ if dein#load_state('~/.cache/dein')
 
   " Start Screen
    call dein#add('mhinz/vim-startify')
+   call dein#add('glepnir/dashboard-nvim')
 
   " markdown
    call dein#add('plasticboy/vim-markdown', {'on_ft':['markdown', 'pandoc.markdown', 'rmd', 'md']})
@@ -272,7 +274,8 @@ syntax enable
 
   " indentLine
    let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
-   let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+   let g:indentLine_fileTypeExclude = ['dashboard']  
+
 
   " limelight
    autocmd! User GoyoEnter Limelight
@@ -287,10 +290,6 @@ syntax enable
   set showtabline=2
   set noshowmode  
   set t_Co=256
-   " python from powerline.vim import setup as powerline_setup
-   "python powerline_setup()
-   "python del powerline_setup
-  "set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/ 'powerline的安装路径，可能需要自行调整'
   
   " lightline
    let g:lightline = {
@@ -298,4 +297,4 @@ syntax enable
          \ }
 
   " vim-markdown
-  set nofoldenable
+  "set nofoldenable
