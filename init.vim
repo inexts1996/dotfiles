@@ -224,6 +224,7 @@ if dein#load_state('~/.cache/dein')
    call dein#add('junegunn/fzf', { 'build': './install' }) 
    call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' }) 
    call dein#add('BurntSushi/ripgrep')
+   call dein#add('liuchengxu/vim-clap')
   
   " others
    call dein#add('takac/vim-hardtime')
@@ -298,3 +299,10 @@ syntax enable
 
   " vim-markdown
   "set nofoldenable
+
+  " dashboard
+  let g:dashboard_default_executive ='clap'
+
+  " vim-clap
+  let g:clap_layout = { 'relative': 'editor'  }
+  let g:clap_theme = 'material_design_dark'
