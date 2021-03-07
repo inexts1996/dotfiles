@@ -116,8 +116,7 @@
    let g:python3_host_prog = "D:/Programs/Python38/python.exe"
 
   " paths
-   set path+=$PWD/**
-   "set path+= F:/inexts/**
+   set path+=$PWD/**,E:/Project/Unity/**
 "========================================================
 "key mappings
 "========================================================
@@ -132,6 +131,9 @@
    vnoremap <leader>y "+y
   " fileTree 切换
    nnoremap <silent> <F3> :Defx<Cr>
+
+   nnoremap <silent> <C-f> :Files<CR>
+   nnoremap <silent> <Leader>f :Rg<CR>
 
 " markdown map
   " Goyo
@@ -186,7 +188,7 @@ if dein#load_state('~/.cache/dein')
 
   "Display Plugins
    call dein#add('morhetz/gruvbox')
-   call dein#add('itchyny/landscape.vim')
+   "call dein#add('itchyny/landscape.vim')
    call dein#add('wsdjeg/dein-ui.vim')
    "call dein#add('powerline/powerline')
    call dein#add('itchyny/lightline.vim')
@@ -205,25 +207,25 @@ if dein#load_state('~/.cache/dein')
    call dein#add('jiangmiao/auto-pairs', {'merged':0, 'rev': 'release'})
 
   " Recent files
-   call dein#add('Shougo/neomru.vim')
+   "call dein#add('Shougo/neomru.vim')
 
   " Start Screen
-   call dein#add('mhinz/vim-startify')
+   "call dein#add('mhinz/vim-startify')
    call dein#add('glepnir/dashboard-nvim')
 
   " markdown
-   call dein#add('plasticboy/vim-markdown', {'on_ft':['markdown', 'pandoc.markdown', 'rmd', 'md']})
-   call dein#add('iamcco/markdown-preview.nvim', 
-			   \ {'on_ft' : ['markdown', 'pandoc.markdown', 'rmd','md'],
-			    \ 'build' : 'sh -c "cd app && yarn install" ' })
-   call dein#add('junegunn/goyo.vim')
-   call dein#add('junegunn/limelight.vim')
-   call dein#add('amix/vim-zenroom2')
+   "call dein#add('plasticboy/vim-markdown', {'on_ft':['markdown', 'pandoc.markdown', 'rmd', 'md']})
+   "call dein#add('iamcco/markdown-preview.nvim', 
+"			   \ {'on_ft' : ['markdown', 'pandoc.markdown', 'rmd','md'],
+"			    \ 'build' : 'sh -c "cd app && yarn install" ' })
+"   call dein#add('junegunn/goyo.vim')
+"   call dein#add('junegunn/limelight.vim')
+"   call dein#add('amix/vim-zenroom2')
 
   " search
    call dein#add('junegunn/fzf', { 'build': './install' }) 
    call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' }) 
-   call dein#add('BurntSushi/ripgrep')
+   "call dein#add('liuchengxu/vim-clap')
   
   " others
    call dein#add('takac/vim-hardtime')
@@ -278,18 +280,18 @@ syntax enable
 
 
   " limelight
-   autocmd! User GoyoEnter Limelight
-   autocmd! User GoyoLeave Limelight!
+"   autocmd! User GoyoEnter Limelight
+   "autocmd! User GoyoLeave Limelight!
   
   " vim_hardtime
    let g:hardtime_default_on = 1
 
   " powerline
 
-  set laststatus=2  
-  set showtabline=2
-  set noshowmode  
-  set t_Co=256
+  "set laststatus=2  
+  "set showtabline=2
+  "set noshowmode  
+  "set t_Co=256
   
   " lightline
    let g:lightline = {
