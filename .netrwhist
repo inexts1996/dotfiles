@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhistcnt =7
 let g:netrw_dirhist_7='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Lottery'
 let g:netrw_dirhist_6='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
@@ -10,3 +11,16 @@ let g:netrw_dirhist_1='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Serv
 let g:netrw_dirhist_0='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
 let g:netrw_dirhist_9='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Book'
 let g:netrw_dirhist_8='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
+=======
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='C:/Users/iNeXTs'
+let g:netrw_dirhist_3='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/City'
+let g:netrw_dirhist_2='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
+let g:netrw_dirhist_1='H:\projects\Works\SlgClient\Assets\Scripts\HotfixPro\Services\UI\Module\Emperor'
+let g:netrw_dirhist_0='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Kingdom'
+let g:netrw_dirhist_9='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
+let g:netrw_dirhist_8='H:\projects\Works\SlgClient\Assets\Scripts\HotfixPro\Services\UI\Module\Emperor'
+let g:netrw_dirhist_7='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
+let g:netrw_dirhist_6='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module/Kingdom'
+let g:netrw_dirhist_5='H:/projects/Works/SlgClient/Assets/Scripts/HotfixPro/Services/UI/Module'
+>>>>>>> 909e05572b1b5b78db390847ad4bf8cb86b14262
