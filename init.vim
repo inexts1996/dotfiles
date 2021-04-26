@@ -116,7 +116,7 @@
    let g:python3_host_prog = "D:/Programs/Python38/python.exe"
 
   " paths
-   set path+=$PWD/**,E:/Project/Unity/**
+   set path+=$PWD/**,H:/projects/Works/SlgClient/Assets/Scripts/**
 "========================================================
 "key mappings
 "========================================================
@@ -124,7 +124,7 @@
    map <leader>e :e! ~/AppData/Local/nvim/init.vim<cr>
    autocmd! bufwritepost $MYVIMRC source $MYVIMRC
    " 打开自己收集的vim一些知识
-   nnoremap <leader>h :e ~/AppData/Local/nvim/help.md<cr>
+   nnoremap <leader>mh :e ~/AppData/Local/nvim/help.md<cr>
   " 修复Shift + insert的错误
    inoremap <silent>  <S-Insert>  <C-R>+
   " 复制选中区到系统剪切板中
@@ -133,7 +133,16 @@
    nnoremap <silent> <F3> :Defx<Cr>
 
    nnoremap <silent> <C-f> :Files<CR>
-   nnoremap <silent> <Leader>f :Rg<CR>
+   nnoremap <silent> <Leader>r :Rg<CR>
+   nnoremap <silent> <Leader>b :Buffers<CR>
+   nnoremap <silent> <Leader>/ :BLines<CR>
+   nnoremap <silent> <Leader>` :Marks<CR>
+   nnoremap <silent> <Leader>g :Commits<CR>
+   nnoremap <silent> <Leader>H :Helptags<CR>
+   nnoremap <silent> <Leader>hh :History<CR>
+   nnoremap <silent> <Leader>h: :History:<CR>
+   nnoremap <silent> <Leader>h/ :History/<CR>
+
 
 " markdown map
   " Goyo
@@ -188,6 +197,8 @@ if dein#load_state('~/.cache/dein')
 
   "Display Plugins
    call dein#add('morhetz/gruvbox')
+   call dein#add('liuchengxu/space-vim-theme')
+   call dein#add('ayu-theme/ayu-vim')
    "call dein#add('itchyny/landscape.vim')
    call dein#add('wsdjeg/dein-ui.vim')
    "call dein#add('powerline/powerline')
@@ -195,6 +206,7 @@ if dein#load_state('~/.cache/dein')
 
   "CSharp Plugins
    call dein#add('OmniSharp/omnisharp-vim', {'on_ft': ['cs']})
+   call dein#add('OrangeT/vim-csharp')
 
   "fileTree Plugins
    call dein#add('Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'})
@@ -284,10 +296,11 @@ syntax enable
    "autocmd! User GoyoLeave Limelight!
   
   " vim_hardtime
-   let g:hardtime_default_on = 1
+ 	let g:hardtime_default_on = 1
+	let g:hardtime_timeout = 2000
+	let g:hardtime_ignore_quickfix = 1
 
   " powerline
-
   "set laststatus=2  
   "set showtabline=2
   "set noshowmode  
@@ -302,8 +315,46 @@ syntax enable
   "set nofoldenable
 
   " dashboard
-  let g:dashboard_default_executive ='clap'
+  let g:dashboard_default_executive ='fzf'
 
   " vim-clap
-  let g:clap_layout = { 'relative': 'editor'  }
-  let g:clap_theme = 'material_design_dark'
+  "let g:clap_layout = { 'relative': 'editor'  }
+  "let g:clap_theme = 'material_design_dark'
+  
+  " fzf
+  	let g:fzf_preview_window = []
+	let g:fzf_layout = { 'down': '40%' }
+	let g:fzf_colors =
+\{ 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+" [Commands] --expect expression for directly executing the command
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
+" neovide config
+let g:neovide_transparency=0.9
+let g:neovide_refresh_rate=140
+command! Scratch lua require'tools'.makeScratch()
+
+" Coc Config
+let g:coc_global_extensions=[ 'coc-omnisharp']
