@@ -3,7 +3,7 @@
 "=============================================================================
 
 if exists('g:GuiLoaded')
-  exe 'Guifont! Ubuntu Mono:h13'
+  exe 'Guifont! Ubuntu Mono:h12'
   "exe 'Guifont! Fixedsys Excelsior:h12'
   "set linespace=4
 

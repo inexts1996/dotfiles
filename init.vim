@@ -199,9 +199,7 @@ if dein#load_state('~/.cache/dein')
    call dein#add('morhetz/gruvbox')
    call dein#add('liuchengxu/space-vim-theme')
    call dein#add('ayu-theme/ayu-vim')
-   "call dein#add('itchyny/landscape.vim')
    call dein#add('wsdjeg/dein-ui.vim')
-   "call dein#add('powerline/powerline')
    call dein#add('itchyny/lightline.vim')
 
   "CSharp Plugins
@@ -218,26 +216,12 @@ if dein#load_state('~/.cache/dein')
    call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
    call dein#add('jiangmiao/auto-pairs', {'merged':0, 'rev': 'release'})
 
-  " Recent files
-   "call dein#add('Shougo/neomru.vim')
-
   " Start Screen
-   "call dein#add('mhinz/vim-startify')
    call dein#add('glepnir/dashboard-nvim')
-
-  " markdown
-   "call dein#add('plasticboy/vim-markdown', {'on_ft':['markdown', 'pandoc.markdown', 'rmd', 'md']})
-   "call dein#add('iamcco/markdown-preview.nvim', 
-"			   \ {'on_ft' : ['markdown', 'pandoc.markdown', 'rmd','md'],
-"			    \ 'build' : 'sh -c "cd app && yarn install" ' })
-"   call dein#add('junegunn/goyo.vim')
-"   call dein#add('junegunn/limelight.vim')
-"   call dein#add('amix/vim-zenroom2')
 
   " search
    call dein#add('junegunn/fzf', { 'build': './install' }) 
    call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' }) 
-   "call dein#add('liuchengxu/vim-clap')
   
   " others
    call dein#add('takac/vim-hardtime')
@@ -289,37 +273,28 @@ syntax enable
   " indentLine
    let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
    let g:indentLine_fileTypeExclude = ['dashboard']  
-
-
-  " limelight
-"   autocmd! User GoyoEnter Limelight
-   "autocmd! User GoyoLeave Limelight!
   
   " vim_hardtime
  	let g:hardtime_default_on = 1
 	let g:hardtime_timeout = 2000
 	let g:hardtime_ignore_quickfix = 1
 
-  " powerline
-  "set laststatus=2  
-  "set showtabline=2
-  "set noshowmode  
-  "set t_Co=256
-  
   " lightline
    let g:lightline = {
          \ 'colorscheme': 'wombat',
          \ }
 
-  " vim-markdown
-  "set nofoldenable
-
   " dashboard
   let g:dashboard_default_executive ='fzf'
-
-  " vim-clap
-  "let g:clap_layout = { 'relative': 'editor'  }
-  "let g:clap_theme = 'material_design_dark'
+  let g:dashboard_custom_shortcut={
+			  \ 'last_session'       : 'SPC s l',
+			  \ 'find_history'       : 'SPC f h',
+			  \ 'find_file'          : 'SPC f f',
+			  \ 'new_file'           : 'SPC c n',
+			  \ 'change_colorscheme' : 'SPC t c',
+			  \ 'find_word'          : 'SPC f a',
+			  \ 'book_marks'         : 'SPC f b',
+			  \ }
   
   " fzf
   	let g:fzf_preview_window = []
@@ -351,8 +326,6 @@ let g:fzf_tags_command = 'ctags -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
-" neovide config
-let g:neovide_refresh_rate=140
 command! Scratch lua require'tools'.makeScratch()
 
 " Coc Config
