@@ -352,7 +352,6 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 " neovide config
-let g:neovide_transparency=0.9
 let g:neovide_refresh_rate=140
 command! Scratch lua require'tools'.makeScratch()
 
