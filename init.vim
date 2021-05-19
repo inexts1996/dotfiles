@@ -199,6 +199,7 @@ if dein#load_state('~/.cache/dein')
    call dein#add('morhetz/gruvbox')
    call dein#add('liuchengxu/space-vim-theme')
    call dein#add('ayu-theme/ayu-vim')
+   call dein#add('junegunn/seoul256.vim')
    call dein#add('wsdjeg/dein-ui.vim')
    call dein#add('itchyny/lightline.vim')
 
@@ -222,6 +223,9 @@ if dein#load_state('~/.cache/dein')
   " search
    call dein#add('junegunn/fzf', { 'build': './install' }) 
    call dein#add('junegunn/fzf.vim', { 'depends': 'junegunn/fzf' }) 
+
+   " registers
+   call dein#add('junegunn/vim-peekaboo')
   
   " others
    call dein#add('takac/vim-hardtime')
@@ -235,7 +239,9 @@ syntax enable
 "========================================================
 "Pluggins settings
 "========================================================
-  " gruvbox
+   " gruvbox
+  " transparent bg
+"autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
    colorscheme gruvbox
    let g:gruvbox_contrast_dark = 'hard'
    set background=dark    " Setting dark mode
@@ -330,3 +336,6 @@ command! Scratch lua require'tools'.makeScratch()
 
 " Coc Config
 let g:coc_global_extensions=[ 'coc-omnisharp']
+
+" vim-peekaboo setting
+ 
