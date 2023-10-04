@@ -1,0 +1,247 @@
+2023-05-30 02:17:49 - Neovide panicked with the message 'Library libxkbcommon-x11.so could not be loaded.'. (File: /usr/src/debug/neovide-git/neovide-git/CARGO/git/checkouts/xkbcommon-dl-f5ddeba7a59cc2f1/9008328/src/x11.rs; Line: 70, Column: 39)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: __libc_start_main
+  18: <unknown>
+
+2023-05-30 02:18:04 - Neovide panicked with the message 'Library libxkbcommon-x11.so could not be loaded.'. (File: /build/.cargo/git/checkouts/xkbcommon-dl-f5ddeba7a59cc2f1/9008328/src/x11.rs; Line: 70, Column: 39)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: __libc_start_main
+  17: <unknown>
+
+2023-06-19 11:02:17 - Neovide panicked with the message 'Focus Lost Failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_command")'. (File: src\bridge\ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-06-19 11:02:17 - Neovide panicked with the message 'Focus Lost Failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_command")'. (File: src\bridge\ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-06-19 11:02:17 - Neovide panicked with the message 'Focus Lost Failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_command")'. (File: src\bridge\ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-06-19 11:02:17 - Neovide panicked with the message 'Focus Gained Failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_command")'. (File: src\bridge\ui_commands.rs; Line: 147, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-06-19 11:02:17 - Neovide panicked with the message 'Focus Gained Failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_command")'. (File: src\bridge\ui_commands.rs; Line: 147, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-06-19 11:02:17 - Neovide panicked with the message 'Input failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_input")'. (File: src\bridge\ui_commands.rs; Line: 51, Column: 50)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: BaseThreadInitThunk
+  16: RtlUserThreadStart
+
+2023-06-19 12:01:09 - Neovide panicked with the message 'Could not setup setting notifier for scroll_animation_length: Error sending request 'nvim_command''. (File: src\error_handling.rs; Line: 5, Column: 5)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: BaseThreadInitThunk
+  16: RtlUserThreadStart
+
+2023-06-19 12:01:09 - Neovide panicked with the message 'Focus Lost Failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_command")'. (File: src\bridge\ui_commands.rs; Line: 143, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-06-19 12:01:09 - Neovide panicked with the message 'Resize failed: DecodeError(ReaderError(Custom { kind: UnexpectedEof, error: "EOF" }), "nvim_ui_try_resize")'. (File: src\bridge\ui_commands.rs; Line: 139, Column: 18)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: BaseThreadInitThunk
+  17: RtlUserThreadStart
+
+2023-09-27 03:49:11 - Neovide panicked with the message 'Could not create surface'. (File: src\renderer\rendered_window.rs; Line: 87, Column: 6)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: DispatchMessageW
+  16: DispatchMessageW
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+
